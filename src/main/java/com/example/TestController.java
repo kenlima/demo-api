@@ -6,10 +6,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
@@ -35,6 +32,12 @@ public class TestController {
 
     @Autowired
     private ThreadPoolTaskExecutor threadPoolExecutor;
+
+    @GetMapping("/test2")
+    public String test2() {
+        System.out.println("test");
+        return "test";
+    }
 
 
     @RequestMapping(path = "/test", produces = "application/json")
