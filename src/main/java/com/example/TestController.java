@@ -47,7 +47,7 @@ public class TestController {
         return "test";
     }
 
-    @PostMapping("/jira2")
+    @PostMapping("*")
     public void jira2() {
         System.out.println("jira2");
     }
