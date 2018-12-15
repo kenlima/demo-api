@@ -30,12 +30,20 @@ public class TestController {
     private TestService testService;
 
 
+
+
     @Autowired
     private ThreadPoolTaskExecutor threadPoolExecutor;
 
     @GetMapping("/test2")
     public String test2() {
         System.out.println("test");
+        return "test";
+    }
+
+    @PostMapping("/jira")
+    public String jira(@RequestBody Object obj) {
+        System.out.println(obj);
         return "test";
     }
 
