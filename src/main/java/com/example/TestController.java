@@ -47,6 +47,11 @@ public class TestController {
         return "test";
     }
 
+    @PostMapping("/jira2")
+    public void jira2() {
+        System.out.println("jira2");
+    }
+
 
     @RequestMapping(path = "/test", produces = "application/json")
     public String test() {
