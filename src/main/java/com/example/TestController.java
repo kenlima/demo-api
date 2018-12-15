@@ -41,8 +41,8 @@ public class TestController {
         return "test";
     }
 
-    @PostMapping("/jira")
-    public String jira(@RequestBody Object obj) {
+    @GetMapping("/jira")
+    public String jira(Object obj) {
         System.out.println(obj);
         return "test";
     }
