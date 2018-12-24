@@ -35,23 +35,17 @@ public class TestController {
     @Autowired
     private ThreadPoolTaskExecutor threadPoolExecutor;
 
-    @GetMapping("/test2")
+    @GetMapping("/jira1")
     public String test2() {
         System.out.println("test");
-        return "test";
+        return "jira1";
     }
 
-    @GetMapping("/jira")
+    @PostMapping("/jira2")
     public String jira(Object obj) {
         System.out.println(obj);
-        return "test";
+        return "jira2";
     }
-
-    @PostMapping("**/*")
-    public void jira2() {
-        System.out.println("jira2");
-    }
-
 
     @RequestMapping(path = "/test", produces = "application/json")
     public String test() {
